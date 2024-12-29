@@ -18,7 +18,6 @@ const Courses = ({ courses }: { courses: CourseInterface[] }) => {
 export default Courses;
 
 export async function getServerSideProps() {
-  console.log("hit here");
   const response = await axios.get(`${NEXT_URL}/api/admin/courses/`, {
     headers: {
       // Authorization: `Bearer ${localStorage.getItem('token')}`
